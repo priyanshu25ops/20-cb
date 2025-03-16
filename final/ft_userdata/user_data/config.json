@@ -1,0 +1,77 @@
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "use_exit_signal": true,
+    "max_open_trades": 1,
+    "stake_currency": "USDT",
+    "minimal_roi": {},
+    "stoploss": -0.7,  
+    "trailing_stop": false,
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "available_capital": 1000,
+    "dry_run_wallet": 1000,
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "cancel_open_orders_on_exit": false,
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing":{
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": ["BTC/USDT:USDT"],
+        "pair_blacklist": ["BNB/.*"]
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "f4425738b6f219e4f95aef771b91c1c755b744c944f5b865ace0cca6713d63ad",
+        "ws_token": "3N8O35xY8kC7L2AZ_XNtpfuCIti_CkOTqg",
+        "CORS_origins": [],
+        "username": "fq",
+        "password": "69"
+    },
+    "bot_name": "fq",
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
